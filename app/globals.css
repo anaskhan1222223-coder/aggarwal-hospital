@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+html { scroll-behavior: smooth; }
+html, body { overflow-x: clip; }
+::selection { background: #0F766E; color: #fff; }
+:focus-visible { outline: 2px solid #0F766E; outline-offset: 2px; }
+button, a { -webkit-tap-highlight-color: transparent; }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Hero slider */
+@keyframes slideProgress {
+  from { width: 0%; }
+  to { width: 100%; }
 }
+.slide-progress { animation: slideProgress 5s linear forwards; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Scroll-triggered animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+.anim-fade-up { animation: fadeInUp 0.7s ease-out forwards; opacity: 0; }
+.anim-fade { animation: fadeIn 0.6s ease-out forwards; opacity: 0; }
+.anim-scale { animation: scaleIn 0.6s ease-out forwards; opacity: 0; }
+
+/* Card hover */
+.card-lift { transition: all 0.35s ease; }
+.card-lift:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(15,118,110,0.15); }
+
+/* WhatsApp pulse */
+@keyframes waPulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  50% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+}
+.wa-pulse { animation: waPulse 2s infinite; }
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #0F766E, #14B8A6);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+body { color: #16211E; line-height: 1.65; }
+h1, h2, h3, h4 { line-height: 1.15; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Ken Burns — slow cinematic zoom on active hero slide */
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
 }
+.kenburns { animation: kenburns 7s ease-out forwards; }
