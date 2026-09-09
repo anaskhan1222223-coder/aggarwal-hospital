@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aggarwal-hospital.vercel.app"),
+  metadataBase: new URL("https://aggarwal-hospital-peach.vercel.app"),
   title: "Aggarwal Multispeciality Hospital | Hospital in Shastri Nagar, Delhi",
   description:
     "Trusted multispeciality hospital in Shastri Nagar for 24 years — dentistry, surgery, gynaecology, orthopaedics, physiotherapy & diagnostics. Book on WhatsApp or call.",
