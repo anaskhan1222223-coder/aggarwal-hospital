@@ -38,8 +38,8 @@ export default function Gallery() {
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#0F766E]">Gallery</p>
             <h2 className="mt-3 text-3xl font-bold text-[#0E3A35] md:text-4xl">A look inside the hospital</h2>
           </div>
-          <p className="max-w-sm text-sm text-[#5A6B7C]">
-            Photography will be updated with real hospital images as provided by the team.
+                   <p className="max-w-sm text-sm text-[#5A6B7C]">
+            Real photographs of our hospital, facilities, and care environments.
           </p>
         </div>
 

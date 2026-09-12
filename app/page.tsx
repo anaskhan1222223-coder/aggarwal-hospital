@@ -14,6 +14,7 @@ import CtaBand from "@/components/CtaBand";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import MobileActionBar from "@/components/MobileActionBar";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
       <CtaBand />
       <Contact />
       <Footer />
+      <FloatingWhatsApp />
       <MobileActionBar />
     </main>
   );

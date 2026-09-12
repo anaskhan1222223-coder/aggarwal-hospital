@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2.5">
-                            <span className="relative h-9 w-9 overflow-hidden rounded-lg border border-white/10">
+                <span className="relative h-9 w-9 overflow-hidden rounded-lg border border-white/10">
                 <Image src="/images/hospital-front.jpg" alt="Aggarwal Multispeciality Hospital" fill sizes="36px" className="object-cover" />
               </span>
               <div>
@@ -69,7 +69,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/45 md:flex-row">
+                <div className="mt-12 rounded-lg border border-[#C0362C]/40 bg-[#C0362C]/10 px-5 py-4 text-center text-xs font-medium text-red-200">
+          In case of a life-threatening emergency, please call{" "}
+          <a href="tel:112" className="font-bold underline underline-offset-2">112</a> or visit the hospital directly.
+        </div>
+
+        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/45 md:flex-row">
           <p>© {new Date().getFullYear()} Aggarwal Multispeciality Hospital. All rights reserved.</p>
           <div className="flex gap-5">
             <a href="/privacy" className="hover:text-white/80">Privacy Policy</a>
