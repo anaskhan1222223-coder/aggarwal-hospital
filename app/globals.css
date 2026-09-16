@@ -63,3 +63,12 @@ h1, h2, h3, h4 { line-height: 1.15; }
   to { transform: scale(1.08); }
 }
 .kenburns { animation: kenburns 7s ease-out forwards; }
+/* ── Mobile responsive polish ── */
+section[id] { scroll-margin-top: 84px; }
+@media (min-width: 768px) {
+  section[id] { scroll-margin-top: 116px; }
+}
+
+h1, h2, h3, h4 { overflow-wrap: break-word; }
+
+img, svg, video, iframe { max-width: 100%; }

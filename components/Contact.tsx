@@ -46,11 +46,10 @@ export default function Contact() {
           </div>
 
           <div className="overflow-hidden rounded-xl border border-[#DCE4EC] shadow-lg">
-            <iframe
+           <iframe
               src={`https://maps.google.com/maps?q=${encodeURIComponent(HOSPITAL.address)}&output=embed`}
-              width="100%"
-              height="100%"
-              style={{ border: 0, minHeight: "420px" }}
+              className="h-[300px] w-full md:h-[420px]"
+              style={{ border: 0 }}
               loading="lazy"
               title="Aggarwal Multispeciality Hospital on Google Maps"
             />
