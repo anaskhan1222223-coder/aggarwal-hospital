@@ -5,7 +5,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 export default function CtaBand() {
   const { ref, isVisible } = useScrollAnimation();
   return (
-    <section ref={ref} className="bg-[#F5F8FB] py-16">
+    <section className="bg-[#0F766E] bg-premium-dark fx-dark py-16">
       <div className={`mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-4 ${isVisible ? "anim-fade-up" : "opacity-0"}`}>
         <div>
           <h2 className="text-2xl font-bold text-[#0E3A35] md:text-3xl">Need help choosing the right department?</h2>

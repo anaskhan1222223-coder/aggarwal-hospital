@@ -2,13 +2,14 @@
 import Image from "next/image";
 import { DOCTOR, HOSPITAL } from "@/lib/hospital";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import TiltCard from "@/components/TiltCard";
 
 export default function HeadDoctor() {
   const { ref, isVisible } = useScrollAnimation();
   return (
     <section id="doctors" className="bg-white py-20 md:py-24">
       <div ref={ref} className="mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-[2fr_3fr] lg:gap-16">
-        <div className={`relative pb-10 ${isVisible ? "anim-fade" : "opacity-0"}`}>
+                <TiltCard className={`relative pb-10 ${isVisible ? "anim-fade" : "opacity-0"}`}>
           <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-[#DCE4EC] shadow-lg">
             <Image
               src={DOCTOR.photo}
@@ -33,7 +34,7 @@ export default function HeadDoctor() {
             <p className="text-sm font-bold text-white">{DOCTOR.name}</p>
             <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9FE8D9]">{DOCTOR.role}</p>
           </div>
-        </div>
+        </TiltCard>
 
         <div className={isVisible ? "anim-fade-up" : "opacity-0"} style={{ animationDelay: "0.12s" }}>
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#0F766E]">From the Director&apos;s desk</p>

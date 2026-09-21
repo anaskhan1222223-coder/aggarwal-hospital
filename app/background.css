@@ -1,0 +1,100 @@
+/* ═══════════════════════════════════════════════════════════
+   AGGARWAL HOSPITAL — DEPTH FIELD BACKGROUND SYSTEM (v3)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Static premium base ── */
+.bg-premium-light {
+  background-image:
+    radial-gradient(700px circle at 92% -12%, rgba(15, 118, 110, 0.13), transparent 62%),
+    radial-gradient(560px circle at -8% 112%, rgba(15, 118, 110, 0.10), transparent 62%),
+    radial-gradient(circle at 1px 1px, rgba(15, 118, 110, 0.10) 1px, transparent 0);
+  background-size: auto, auto, 24px 24px;
+}
+.bg-premium-dark {
+  background-image:
+    radial-gradient(700px circle at 92% -12%, rgba(159, 232, 217, 0.13), transparent 62%),
+    radial-gradient(560px circle at -8% 112%, rgba(159, 232, 217, 0.09), transparent 62%),
+    radial-gradient(circle at 1px 1px, rgba(159, 232, 217, 0.10) 1px, transparent 0);
+  background-size: auto, auto, 24px 24px;
+}
+.bg-ecg-line {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='120' viewBox='0 0 600 120'%3E%3Cpath d='M0 60 H110 L126 60 L138 34 L150 86 L160 12 L172 102 L182 60 H250 L266 46 L282 74 L298 60 H600' fill='none' stroke='%230F766E' stroke-opacity='0.14' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center calc(100% - 16px);
+}
+.bg-ecg-line-dark {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='120' viewBox='0 0 600 120'%3E%3Cpath d='M0 60 H110 L126 60 L138 34 L150 86 L160 12 L172 102 L182 60 H250 L266 46 L282 74 L298 60 H600' fill='none' stroke='%239FE8D9' stroke-opacity='0.14' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center calc(100% - 16px);
+}
+
+/* ── Animated 3D layers ── */
+.fx-light, .fx-dark { position: relative; overflow: clip; }
+.fx-light > *, .fx-dark > * { position: relative; z-index: 1; }
+
+/* Receding 3D floor grid — flows toward the visitor */
+.fx-light::before, .fx-dark::before {
+  content: "";
+  position: absolute;
+  left: -20%; right: -20%; bottom: -14%;
+  height: 58%;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(15, 118, 110, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 118, 110, 0.10) 1px, transparent 1px);
+  background-size: 44px 44px;
+  transform: perspective(700px) rotateX(58deg);
+  transform-origin: bottom center;
+  animation: gridFlow 16s linear infinite;
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 78%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 78%);
+}
+.fx-dark::before {
+  background-image:
+    linear-gradient(rgba(159, 232, 217, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(159, 232, 217, 0.10) 1px, transparent 1px);
+}
+@keyframes gridFlow {
+  from { background-position-y: 0; }
+  to { background-position-y: 44px; }
+}
+
+/* Drifting depth orb — soft light breathing */
+.fx-light::after, .fx-dark::after {
+  content: "";
+  position: absolute;
+  top: -18%; right: -14%;
+  width: 46rem; height: 46rem;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(15, 118, 110, 0.10), transparent 62%);
+  animation: orbFloat 26s ease-in-out infinite alternate;
+}
+.fx-dark::after {
+  background: radial-gradient(circle, rgba(159, 232, 217, 0.12), transparent 62%);
+}
+@keyframes orbFloat {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(-6rem, 4rem, 0) scale(1.18); }
+}
+
+/* ECG heartbeat sweep */
+.fx-ecg-anim { animation: ecgSlide 14s linear infinite; }
+@keyframes ecgSlide {
+  from { background-position-x: 0; }
+  to { background-position-x: 600px; }
+}
+
+/* ── Reduced motion: stillness ── */
+@media (prefers-reduced-motion: reduce) {
+  .fx-light::before, .fx-light::after,
+  .fx-dark::before, .fx-dark::after,
+  .fx-ecg-anim { animation: none; }
+}
+
+/* ── Premium micro-details ── */
+::selection { background: #0F766E; color: #FFFFFF; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #F5F8FB; }
+::-webkit-scrollbar-thumb { background: rgba(15, 118, 110, 0.45); border-radius: 8px; border: 2px solid #F5F8FB; }
+::-webkit-scrollbar-thumb:hover { background: #0F766E; }

@@ -3,7 +3,7 @@ import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-[#F5F8FB] py-20 md:py-24">
+    <section id="contact" className="bg-white bg-premium-light fx-light bg-ecg-line fx-ecg-anim py-20 md:py-24">
       <div className="mx-auto max-w-7xl px-4">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#0F766E]">Contact & location</p>
@@ -40,6 +40,9 @@ export default function Contact() {
                   className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#1EBE5B]"
                 >
                   <WhatsAppIcon className="h-4 w-4" /> WhatsApp
+                </a>
+                   <a href="#appointment" className="rounded-lg border border-[#0E3A35]/25 px-5 py-2.5 text-sm font-semibold text-[#0E3A35] hover:bg-white">
+                  Book Appointment
                 </a>
               </div>
             </div>

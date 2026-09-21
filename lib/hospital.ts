@@ -34,16 +34,101 @@ export const DOCTOR = {
 };
 export const DOCTORS = [DOCTOR];
 export const DEPARTMENTS = [
-  { icon: "🩺", name: "General Medicine", hindi: "फिजिशियन", points: ["Physician consultations", "Chronic & seasonal illness care"] },
-  { icon: "🩹", name: "General Surgery", hindi: "जनरल सर्जरी", points: ["Surgical procedures", "Pre & post-operative care"] },
-  { icon: "🔬", name: "Laparoscopic Surgery", hindi: "दूरबीन आपरेशन", points: ["Minimally invasive (keyhole) surgery", "Faster recovery"] },
-  { icon: "🤰", name: "Gynaecology & Obstetrics", hindi: "स्त्री रोग", points: ["Women's health", "Pregnancy care"] },
-  { icon: "🧒", name: "Paediatrics", hindi: "बाल रोग", points: ["Child health & growth", "Newborn care"] },
-  { icon: "🦴", name: "Orthopaedics", hindi: "हड्डी रोग", points: ["Bone & joint treatment", "Fracture care"] },
-  { icon: "👂", name: "ENT", hindi: "कान, नाक, गला", points: ["Ear, nose & throat care"] },
-  { icon: "🦷", name: "Dentistry", hindi: "दंत चिकित्सा", points: ["RCT & laser dentistry", "Dental procedures"] },
+  {
+    icon: "🩺",
+    image: "/images/general-medicine.jpg",
+    name: "General Medicine",
+    hindi: "फिजिशियन",
+    points: ["Physician consultations", "Chronic & seasonal illness care"],
+  },
+  {
+    icon: "🩹",
+    image: "/images/general-surgery.jpg",
+    name: "General Surgery",
+    hindi: "जनरल सर्जरी",
+    points: ["Surgical procedures", "Pre & post-operative care"],
+  },
+  {
+    icon: "🔬",
+    image: "/images/laparoscopic-surgery.jpg",
+    name: "Laparoscopic Surgery",
+    hindi: "दूरबीन आपरेशन",
+    points: ["Minimally invasive (keyhole) surgery", "Faster recovery"],
+  },
+  {
+    icon: "🤰",
+    image: "/images/gynaecology-obstetrics.jpg",
+    name: "Gynaecology & Obstetrics",
+    hindi: "स्त्री रोग",
+    points: ["Women's health", "Pregnancy care"],
+  },
+  {
+    icon: "🧒",
+    image: "/images/pediatrics.jpg",
+    name: "Paediatrics",
+    hindi: "बाल रोग",
+    points: ["Child health & growth", "Newborn care"],
+  },
+  {
+    icon: "🦴",
+    image: "/images/orthopaedics.jpg",
+    name: "Orthopaedics",
+    hindi: "हड्डी रोग",
+    points: ["Bone & joint treatment", "Fracture care"],
+  },
+  {
+    icon: "👂",
+    image: "/images/ent.jpg",
+    name: "ENT",
+    hindi: "कान, नाक, गला",
+    points: ["Ear, nose & throat care"],
+  },
+  {
+    icon: "🦷",
+    image: "/images/dentistry.jpg",
+    name: "Dentistry",
+    hindi: "दंत चिकित्सा",
+    points: ["RCT & laser dentistry", "Dental procedures"],
+  },
 ];
-
 export const waLink = (msg: string) =>
   `https://wa.me/${HOSPITAL.whatsapp}?text=${encodeURIComponent(msg)}`;
 export const callLink = () => `tel:+${HOSPITAL.phone}`;
+
+// ── Hospital introduction film ──
+// When the shoot video is ready:
+//   Option A (recommended): upload to YouTube → paste the video ID below
+//   Option B: put the file at public/video/hospital-tour.mp4 → set mp4 below
+// Until then the section shows a clean "coming soon" poster card.
+export const VIDEO = {
+  youtubeId: "", // e.g. "abc123XYZ"
+  mp4: "",       // e.g. "/video/hospital-tour.mp4"
+  poster: "/images/hospital-entrance.jpg",
+  title: "Welcome to Aggarwal Multispeciality Hospital",
+};
+// ── Google reviews (public profile) ──
+// 1) Google Maps → search "Aggarwal Multispeciality Hospital Shastri Nagar"
+// 2) Copy the rating number + review count into rating / count
+// 3) Maps → hospital → "Share" → copy link → paste into link (perfect deep link)
+// 4) Copy 2–3 REAL reviews word-for-word into quotes (name, text, time label)
+export const GOOGLE_REVIEWS = {
+  rating: 4.0,
+  count: 31,
+  link: "https://www.google.com/maps/search/?api=1&query=Aggarwal+Multispeciality+Hospital,+1607-B+Shastri+Nagar,+New+Delhi+110052",
+  quotes: [
+    {
+      name: "Himanshu Vohra",
+      when: "5 years ago",
+      stars: 5,
+      text: "Great service and doctors have every niche knowledge of thier field. Also the staff is great especially i had a very good personal experience with one of their members. The lady with one hand, single handedly organized stuffs in a effective manner, great to see that. Kudos to her service and attitude towards her duty.",
+    },
+    {
+      name: "Srd. Jagvinder Singh",
+      when: "7 years ago",
+      stars: 5,
+      text: "Good nursing hospital of the area. Old and famous amongst nearby by residents.",
+    },
+    { name: "Vikram Parkash Kamal thakur", when: "Google review", stars: 5, text: "" },
+    { name: "Khushi Rathi", when: "Google review", stars: 5, text: "" },
+  ],
+};

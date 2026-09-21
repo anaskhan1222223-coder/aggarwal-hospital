@@ -9,6 +9,8 @@ const COLS = [
       { href: "#departments", label: "Departments" },
       { href: "#doctors", label: "Doctors" },
       { href: "#gallery", label: "Facilities & Gallery" },
+      { href: "#facilities", label: "Facilities" },
+      { href: "#video", label: "Hospital film" },
     ],
   },
   {

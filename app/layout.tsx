@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
+import "./background.css";
 import { HOSPITAL, DEPARTMENTS } from "@/lib/hospital";
+import IntroOverlay from "@/components/IntroOverlay";
+
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -60,6 +63,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${inter.variable}`}>
+        <IntroOverlay />
         {children}
         <script
           type="application/ld+json"

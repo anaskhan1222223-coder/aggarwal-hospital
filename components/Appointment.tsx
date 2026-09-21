@@ -47,7 +47,7 @@ export default function Appointment() {
   };
 
   return (
-    <section id="appointment" className="bg-[#0E3A35] py-20 md:py-24">
+    <section id="appointment" className="bg-[#0E3A35] bg-premium-dark fx-dark py-20 md:py-24">
       <div ref={ref} className="mx-auto grid max-w-7xl gap-12 px-4 lg:grid-cols-[1fr_1.2fr]">
         <div className={isVisible ? "anim-fade" : "opacity-0"}>
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#9FE8D9]">Appointments</p>

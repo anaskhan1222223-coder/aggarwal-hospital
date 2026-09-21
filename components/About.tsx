@@ -27,7 +27,7 @@ export default function About() {
           </div>
           <div className="absolute bottom-0 left-4 w-40 overflow-hidden rounded-lg border-4 border-white shadow-xl md:-left-6 md:w-56">
             <div className="relative aspect-video">
-                            <Image
+               <Image
                 src="/images/hospital-entrance.jpg"
                 alt="Hospital entrance and lobby"
                 fill
@@ -46,6 +46,9 @@ export default function About() {
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#0F766E]">About the hospital</p>
           <h2 className="mt-3 text-3xl font-bold text-[#0E3A35] md:text-4xl">Shastri Nagar&apos;s hospital since 2002</h2>
           <p className="mt-5 text-base leading-relaxed text-[#5A6B7C]">{HOSPITAL.about}</p>
+                    <p className="mt-4 border-l-4 border-[#0F766E]/30 pl-4 text-base font-medium italic text-[#334155]">
+            Our mission is simple: honest advice, careful treatment and dignified care for every family that walks in.
+          </p>
           <ul className="mt-6 space-y-3">
             {CHECKLIST.map((item) => (
               <li key={item} className="flex items-start gap-3 font-medium text-[#334155]">
