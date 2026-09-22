@@ -101,10 +101,8 @@ export const callLink = () => `tel:+${HOSPITAL.phone}`;
 //   Option B: put the file at public/video/hospital-tour.mp4 → set mp4 below
 // Until then the section shows a clean "coming soon" poster card.
 export const VIDEO = {
-  youtubeId: "", // e.g. "abc123XYZ"
-  mp4: "",       // e.g. "/video/hospital-tour.mp4"
-  poster: "/images/hospital-entrance.jpg",
-  title: "Welcome to Aggarwal Multispeciality Hospital",
+  src: "/video/hospital-tour.mp4",
+  poster: "/images/hospital-front.jpg",
 };
 // ── Google reviews (public profile) ──
 // 1) Google Maps → search "Aggarwal Multispeciality Hospital Shastri Nagar"
