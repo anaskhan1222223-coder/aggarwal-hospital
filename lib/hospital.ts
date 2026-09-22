@@ -126,7 +126,7 @@ export const GOOGLE_REVIEWS = {
       stars: 5,
       text: "Good nursing hospital of the area. Old and famous amongst nearby by residents.",
     },
-    { name: "Vikram Parkash Kamal thakur", when: "Google review", stars: 5, text: "" },
-    { name: "Khushi Rathi", when: "Google review", stars: 5, text: "" },
+    { name: "Vikram Parkash Kamal thakur", when: "Google review", stars: 5, text: " Modern, well-equipped, and clean facilities combined with respectful treatment contribute to smooth recoveries." },
+    { name: "Khushi Rathi", when: "Google review", stars: 5, text: "Continuous emotional support and reassuring attitudes from obstetrics teams help alleviate anxiety during pregnancy." },
   ],
 };

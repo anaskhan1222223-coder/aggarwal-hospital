@@ -23,7 +23,7 @@ export default function VideoTour() {
           Walk through our hospital
         </h2>
         <p className={`mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base ${isVisible ? "anim-fade-up" : "opacity-0"}`} style={{ animationDelay: "0.08s" }}>
-          Ninety seconds inside Aggarwal Multispeciality Hospital — real rooms, real people, real care.
+                    A 50-second walk inside Aggarwal Multispeciality Hospital — real rooms, real people, real care.
         </p>
 
         <div className={`group relative mt-10 overflow-hidden rounded-xl border border-white/10 shadow-2xl ${isVisible ? "anim-fade-up" : "opacity-0"}`} style={{ animationDelay: "0.15s" }}>

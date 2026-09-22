@@ -19,7 +19,7 @@ export default function About() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
             <Image
               src="/images/hospital-front.jpg"
-              alt="Aggarwal Multispeciality Hospital building front, 1607-B Shastri Na"
+              alt="Aggarwal Multispeciality Hospital building front, 1607-B Shastri Nagar"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -28,7 +28,7 @@ export default function About() {
           <div className="absolute bottom-0 left-4 w-40 overflow-hidden rounded-lg border-4 border-white shadow-xl md:-left-6 md:w-56">
             <div className="relative aspect-video">
                <Image
-                src="/images/hospital-entrance.jpg"
+                src="/images/doctor-gupta-2.jpg"
                 alt="Hospital entrance and lobby"
                 fill
                 sizes="220px"
